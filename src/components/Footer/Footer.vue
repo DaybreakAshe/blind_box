@@ -22,7 +22,7 @@ export default {
   name:'Footer',
   data(){
     return {
-      oneIcon:'el-icon-bell',
+      oneIcon:'el-icon-message-solid',
       twoIcon:'el-icon-star-off',
       threeIcon:'el-icon-user'
     }
@@ -53,6 +53,7 @@ export default {
   position: fixed;
   bottom: 0;
   display: flex;
+  border-top: 0.5px rgb(168, 166, 166) solid;
 }
 
 #footerBox .Box_tab {
