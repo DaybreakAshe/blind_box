@@ -1,5 +1,9 @@
 <template>
   <div>
+    <!-- <router-link active-class="active" to="/page1">page1</router-link>
+    <router-link active-class="active" to="/page2">page2</router-link>
+    <router-link active-class="active" to="/page3">page3</router-link> -->
+    <router-view></router-view>
     <div id="footerBox">
       <div class="Box_tab" @click="oneClick">
         <i :class="oneIcon"></i>
@@ -8,16 +12,19 @@
       <div class="Box_tab" @click="twoClick">
         <i :class="twoIcon"></i>
         <span>卖朋友</span>
+        
       </div>
       <div class="Box_tab" @click="threeClick">
         <i :class="threeIcon"></i>
         <span>拉朋友来玩</span>
+        
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// import router from '../../router/index'
 export default {
   name:'Footer',
   data(){
@@ -29,16 +36,19 @@ export default {
   },
   methods: {
     oneClick(){
+      this.$router.push('/')
       this.oneIcon='el-icon-message-solid'
       this.twoIcon='el-icon-star-off'
       this.threeIcon='el-icon-user'
     },
     twoClick(){
+      this.$router.push('/page2')
       this.twoIcon='el-icon-star-on'
       this.oneIcon='el-icon-bell'
       this.threeIcon='el-icon-user'
     },
     threeClick(){
+      this.$router.push('/page3')
       this.threeIcon='el-icon-user-solid'
       this.oneIcon='el-icon-bell'
       this.twoIcon='el-icon-star-off'

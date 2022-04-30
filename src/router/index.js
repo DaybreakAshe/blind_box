@@ -10,7 +10,7 @@ import page3 from '../components/page3/page3'
 
 const router = new VueRouter({
     routes: [{
-        path: '/page1',
+        path: '/',
         component: page1
     }, {
         path: '/page2',
