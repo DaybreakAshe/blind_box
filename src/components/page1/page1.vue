@@ -1,12 +1,16 @@
 <template>
   <div>
-      <h1>我是组件一</h1>
+      <Header></Header>
   </div>
 </template>
 
 <script>
+import Header from './Header/Header'
 export default {
-    name:'page1'
+    name:'page1',
+    components:{
+      Header
+    }
 }
 </script>
 
