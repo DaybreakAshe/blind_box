@@ -7,6 +7,7 @@
         <div class="main_img1">
           <!-- 图片 -->
           <img src="../../images/main_1.jpg" alt="资源丢失" />
+          <!-- <img :src='img_address_1' alt="资源丢失" /> -->
         </div>
         <div class="main_img2">
           <!-- 成语 -->
@@ -38,14 +39,18 @@
         </div>
       </div>
     </div>
+    <!-- <div>{{img_address_1}}</div> -->
   </div>
 </template>
 
 <script>
 export default {
   name: "MainBody",
+  // props:['img_address_1'],
   data() {
-    return {};
+    return {
+      
+    };
   },
 };
 </script>
