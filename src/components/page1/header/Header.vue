@@ -3,24 +3,37 @@
     <!-- 页面一的顶部导航栏 -->
     <el-tabs v-model="activeName" @tab-click="handleClick" :stretch="true">
       <el-tab-pane label="找男生" name="first">
-          <Carousel></Carousel>
-          <Recommend></Recommend>
-          <!-- <MainBody :img_address_1='img_address_1'></MainBody> -->
-          <MainBody></MainBody>
-          <MainBody></MainBody>
-          <MainBody></MainBody>
-          <div class="End"></div>
+        <Carousel></Carousel>
+        <Recommend></Recommend>
+        <MainBody1 :Text_1="Text_1"></MainBody1>
+        <MainBody1 :Text_1="Text_1"></MainBody1>
+        <MainBody1 :Text_1="Text_1"></MainBody1>
+        <div class="End"></div>
       </el-tab-pane>
       <el-tab-pane label="找女生" name="second">
         <Carousel></Carousel>
         <Recommend></Recommend>
-        <MainBody></MainBody>
-        <MainBody></MainBody>
-        <MainBody></MainBody>
+        <MainBody2></MainBody2>
+        <MainBody2></MainBody2>
+        <MainBody2></MainBody2>
         <div class="End"></div>
       </el-tab-pane>
-      <el-tab-pane label="放入男生" name="third">放入男生</el-tab-pane>
-      <el-tab-pane label="放入女生" name="fourth">放入女生</el-tab-pane>
+      <el-tab-pane label="放入男生" name="third">
+        <Carousel></Carousel>
+        <Recommend></Recommend>
+        <MainBody3></MainBody3>
+        <MainBody3></MainBody3>
+        <MainBody3></MainBody3>
+        <div class="End"></div>
+      </el-tab-pane>
+      <el-tab-pane label="放入女生" name="fourth">
+        <Carousel></Carousel>
+        <Recommend></Recommend>
+        <MainBody4></MainBody4>
+        <MainBody4></MainBody4>
+        <MainBody4></MainBody4>
+        <div class="End"></div>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -29,19 +42,38 @@
 // 引入组件
 import Carousel from "../Carousel/Carousel";
 import Recommend from "../Recommend/Recommend";
-import MainBody from "../MainBody/MainBody";
+import MainBody1 from "../MainBody/MainBody_1";
+import MainBody2 from "../MainBody/MainBody_2";
+import MainBody3 from "../MainBody/MainBody_3";
+import MainBody4 from "../MainBody/MainBody_4";
 export default {
   name: "Header",
   components: {
     Carousel,
     Recommend,
-    MainBody,
+    MainBody1,
+    MainBody2,
+    MainBody3,
+    MainBody4,
   },
   data() {
     return {
       activeName: "first",
-      // img_address_1:'../../images/main_1.jpg',
-      // img_address_2:'../../images/main_2.jpg'
+      Text_1: {
+        a: "微操匠人，神级走位",
+        b: "“大吉大利，今晚吃鸡”",
+        c: "游戏菜鸡的馈赠",
+      },
+      // Text_2: {
+      //   a: "微操匠人，神级走位",
+      //   b: "“大吉大利，今晚吃鸡”",
+      //   c: "游戏菜鸡的馈赠",
+      // },
+      // Text_3: {
+      //   a: "微操匠人，神级走位",
+      //   b: "“大吉大利，今晚吃鸡”",
+      //   c: "游戏菜鸡的馈赠",
+      // },
     };
   },
   methods: {
@@ -66,9 +98,8 @@ export default {
   margin: 0 0 1px;
 }
 
-.End{
+.End {
   height: 50px;
   /* 为了划到最下面，加了一点空白 */
 }
-
 </style>

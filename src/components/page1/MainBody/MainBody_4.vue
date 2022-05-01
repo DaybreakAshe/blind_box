@@ -6,7 +6,7 @@
       <div class="main_img">
         <div class="main_img1">
           <!-- 图片 -->
-          <img src="../../images/main_1.jpg" alt="资源丢失" />
+          <img src="../../images/main_2.jpg" alt="资源丢失" />
           <!-- <img :src='img_address_1' alt="资源丢失" /> -->
         </div>
         <div class="main_img2">
@@ -31,7 +31,8 @@
           “跟进取者在一起，行动不会落后”
         </div>
         <!-- 立即拿出来一条 -->
-        <button>立即拿出来一条</button>
+        <button>立即塞入这个盒子</button>
+        <!-- <slot>我是默认内容</slot> -->
         <div class="Right_body_text2">
           <!-- 一句文本2，自定义 -->
           <i class="el-icon-thumb"></i>
@@ -39,14 +40,14 @@
         </div>
       </div>
     </div>
-    <!-- <div>{{img_address_1}}</div> -->
+    <!-- <div>{{btn_text}}</div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "MainBody",
-  // props:['img_address_1'],
+  name: "MainBody4",
+  // props:['btn_text'],
   data() {
     return {
       
