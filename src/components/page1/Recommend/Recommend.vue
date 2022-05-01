@@ -1,9 +1,15 @@
 <template>
   <div>
     <div id="box">
-      <div class="one">你的今日专属推荐({{Time.Years}}-{{Time.Moon}}-{{Time.Day}})</div>
+      <div class="one">
+        你的今日专属推荐({{ Time.Years }}-{{ Time.Moon }}-{{ Time.Day }})
+      </div>
       <div class="two">——根据今日用户拿出，放入数据每小时更新——</div>
-      <div class="time_mes">10点后未决定视为主动放弃今日5次机会</div>
+      <div class="time_mes">
+        {{ Time.Hour }}:{{ Time.Minute }}:{{
+          Time.Second
+        }}点后未决定视为主动放弃今日5次机会
+      </div>
     </div>
   </div>
 </template>
@@ -17,17 +23,26 @@ export default {
         Years: "2022",
         Moon: "5",
         Day: "2",
+        Hour: "",
+        Minute: "",
+        Second: "",
       },
     };
   },
   mounted() {
     let myDate = new Date();
-    let Y = myDate.getFullYear();
-    let M = myDate.getMonth();
-    let D = myDate.getDate();
+    let Y = myDate.getFullYear(); //年
+    let M = myDate.getMonth(); //月
+    let D = myDate.getDate(); //日
+    let H = myDate.getHours(); //时
+    let MIN = myDate.getMinutes(); //分
+    let S = myDate.getSeconds(); //秒
     this.Time.Years = Y;
     this.Time.Moon = M;
     this.Time.Day = D;
+    this.Time.Hour = H;
+    this.Time.Minute = MIN;
+    this.Time.Second = S;
   },
 };
 </script>
@@ -51,6 +66,6 @@ export default {
 }
 #box .time_mes {
   color: red;
-  margin-left: 43px;
+  margin-left: 21px;
 }
 </style>
