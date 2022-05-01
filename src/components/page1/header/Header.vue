@@ -6,6 +6,8 @@
         <Carousel></Carousel>
         <Recommend></Recommend>
         <MainBody></MainBody>
+        <MainBody></MainBody>
+        <MainBody></MainBody>
       </el-tab-pane>
       <el-tab-pane label="找女生" name="second">找女生</el-tab-pane>
       <el-tab-pane label="放入男生" name="third">放入男生</el-tab-pane>
@@ -15,9 +17,10 @@
 </template>
 
 <script>
+// 引入组件
 import Carousel from '../Carousel/Carousel'
-import MainBody from '../MainBody/MainBody';
 import Recommend from '../Recommend/Recommend'
+import MainBody from '../MainBody/MainBody'
 export default {
   name: "Header",
   components:{

@@ -63,6 +63,7 @@ export default {
   position: fixed;
   bottom: 0;
   display: flex;
+  background-color: rgb(255, 255, 255);
   border-top: 0.5px rgb(168, 166, 166) solid;
 }
 

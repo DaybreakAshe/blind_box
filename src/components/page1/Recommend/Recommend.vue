@@ -50,22 +50,20 @@ export default {
 <style>
 #box {
   width: 100%;
-  height: 58px;
+  height: 60px;
   border-bottom: 1px rgb(234, 230, 230) solid;
+  text-align: center;
 }
 #box .one {
   font-size: 20px;
   color: #05c1da;
-  margin-left: 53px;
   margin-top: 3px;
   font-weight: bold;
 }
 #box .two {
   font-size: 10px;
-  margin-left: 49px;
 }
 #box .time_mes {
   color: red;
-  margin-left: 21px;
 }
 </style>
