@@ -5,33 +5,23 @@
       <el-tab-pane label="找男生" name="first">
         <Carousel></Carousel>
         <Recommend></Recommend>
-        <MainBody1 :Text_1="Text_1"></MainBody1>
-        <MainBody1 :Text_1="Text_1"></MainBody1>
-        <MainBody1 :Text_1="Text_1"></MainBody1>
+        <MainBody :Text_1="Text_1"></MainBody>
         <div class="End"></div>
       </el-tab-pane>
       <el-tab-pane label="找女生" name="second">
         <Carousel></Carousel>
         <Recommend></Recommend>
-        <MainBody2></MainBody2>
-        <MainBody2></MainBody2>
-        <MainBody2></MainBody2>
         <div class="End"></div>
       </el-tab-pane>
       <el-tab-pane label="放入男生" name="third">
         <Carousel></Carousel>
         <Recommend></Recommend>
-        <MainBody3></MainBody3>
-        <MainBody3></MainBody3>
-        <MainBody3></MainBody3>
+        <MainBody :Text_1="Text_1"></MainBody>
         <div class="End"></div>
       </el-tab-pane>
       <el-tab-pane label="放入女生" name="fourth">
         <Carousel></Carousel>
         <Recommend></Recommend>
-        <MainBody4></MainBody4>
-        <MainBody4></MainBody4>
-        <MainBody4></MainBody4>
         <div class="End"></div>
       </el-tab-pane>
     </el-tabs>
@@ -42,19 +32,13 @@
 // 引入组件
 import Carousel from "../Carousel/Carousel";
 import Recommend from "../Recommend/Recommend";
-import MainBody1 from "../MainBody/MainBody_1";
-import MainBody2 from "../MainBody/MainBody_2";
-import MainBody3 from "../MainBody/MainBody_3";
-import MainBody4 from "../MainBody/MainBody_4";
+import MainBody from "../MainBody/MainBody";
 export default {
   name: "Header",
   components: {
     Carousel,
     Recommend,
-    MainBody1,
-    MainBody2,
-    MainBody3,
-    MainBody4,
+    MainBody
   },
   data() {
     return {

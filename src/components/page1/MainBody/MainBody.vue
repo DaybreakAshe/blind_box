@@ -1,17 +1,18 @@
 <template>
   <div>
     <div id="main_box">
+
       <!-- 左侧 -->
       <!-- 图片 -->
       <div class="main_img">
         <div class="main_img1">
           <!-- 图片 -->
-          <img src="../../images/main_2.jpg" alt="资源丢失" />
+          <img src="../../images/main_1.jpg" alt="资源丢失" />
           <!-- <img :src='img_address_1' alt="资源丢失" /> -->
         </div>
         <div class="main_img2">
           <!-- 成语 -->
-          微操匠人，神级走位
+          {{Text_1.a}}
         </div>
       </div>
 
@@ -28,35 +29,40 @@
         </div>
         <div class="Right_body_text1">
           <!-- 一句文本，有可能是后端发来的 -->
-          “跟进取者在一起，行动不会落后”
+          {{Text_1.b}}
         </div>
         <!-- 立即拿出来一条 -->
-        <button>立即塞入这个盒子</button>
+        <button @click="add">立即决定拿出1条</button>
         <!-- <slot>我是默认内容</slot> -->
         <div class="Right_body_text2">
           <!-- 一句文本2，自定义 -->
           <i class="el-icon-thumb"></i>
-          <span>现在还没起床的首选</span>
+          <span>{{Text_1.c}}</span>
         </div>
       </div>
+
     </div>
-    <!-- <div>{{btn_text}}</div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "MainBody4",
-  // props:['btn_text'],
+  name: "MainBody",
+  props:['Text_1','Text_2','Text_3'],
   data() {
     return {
       
     };
   },
+  methods:{
+    add(){
+      alert(1)
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
@@ -64,9 +70,10 @@ export default {
 #main_box {
   border-radius: 5px;
   margin: 5px;
-  width: 96.5%;
+  width: 99.5%;
   height: 132px;
   /* border: 1px rgb(225, 7, 7) solid; */
+  /* background-color: #bfa; */
   display: flex;
 }
 
@@ -96,9 +103,10 @@ export default {
 
 /* 右侧主体的样式 */
 #main_box .Right_body{
-  width: 230px;
+  width: 90%;
   height: 125px;
   /* border: 1px black solid; */
+  /* background-color: rgb(120, 120, 221); */
   margin: 3px;
   text-align: center;
 }
@@ -109,15 +117,15 @@ export default {
 .el-progress-bar__inner{
   background-color: #56DADE;
 }
-.el-progress-bar{
-  width: 80%;
-}
+/* .el-progress-bar{
+  width: 50%;
+} */
 
 #main_box .Right_body .Right_body_text1{
   margin-top: 3px;
   margin-bottom: 3px;
-  margin-left: 15px;
-  width: 200px;
+  /* margin-left: 15px; */
+  width: 100%;
   height: 30px;
   background-color: #EEF6F8;
   color: #4cbbbf;
