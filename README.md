@@ -1,24 +1,3 @@
-# blindbox
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 项目使用vue3开发，运行命令如下
+### npm run serve
+![输入图片说明](public/image.png)
